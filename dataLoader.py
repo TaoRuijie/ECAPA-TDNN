@@ -32,7 +32,6 @@ class train_loader(object):
 			file_name     = os.path.join(train_path, line.split()[1])
 			self.data_label.append(speaker_label)
 			self.data_list.append(file_name)
-		self.data_list = self.data_list[0:10000]
 
 	def __getitem__(self, index):
 		# Read the utterance and randomly select the segment
