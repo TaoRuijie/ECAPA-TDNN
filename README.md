@@ -114,6 +114,6 @@ Thanks for these authors to open source their code!
 
 ### Notes
 
-**If you meet the problems about this repository, Please ask me from the 'issue' part using English, so others can also benifit from it. I suggest you NOT to ask me though the social media (such as bilibili). Thanks for your understanding!**
+If you meet the problems about this repository, **Please ask me from the 'issue' part in Github (using English) instead of sending the messages to me from bilibili, so others can also benifit from it.** Thanks for your understanding!
 
-**If you improve the result based on this repository by some methods, please let me know. Thanks!**
+If you improve the result based on this repository by some methods, please let me know. Thanks!
