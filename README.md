@@ -35,9 +35,19 @@ pip install -r requirements.txt
 
 Please follow the official code to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part.
 
-Dataset you need to perpare for training: 1) VoxCeleb2 training set, 2) MUSAN dataset, 3) RIR dataset.
+Dataset you need to perpare for training: 
 
-Dataset you need to perpare for evaluation: 1) VoxCeleb1 test set for [Vox1_O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt) 2) VoxCeleb1 train set for [Vox1_E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt) and [Vox1_H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt) (Optional).
+1) VoxCeleb2 training set, 
+
+2) MUSAN dataset, 
+
+3) RIR dataset.
+
+Dataset you need to perpare for evaluation: 
+
+1) VoxCeleb1 test set for [Vox1_O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt) 
+
+2) VoxCeleb1 train set for [Vox1_E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt) and [Vox1_H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt) (Optional)
 
 ### Training
 
