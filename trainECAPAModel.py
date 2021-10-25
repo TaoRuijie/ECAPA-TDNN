@@ -1,3 +1,7 @@
+'''
+This is the main code of the ECAPATDNN project, to define the parameters and build the construction
+'''
+
 import argparse, glob, os, torch, warnings, time
 from tools import *
 from dataLoader import train_loader

@@ -1,3 +1,7 @@
+'''
+AAMsoftmax loss function copied from voxceleb_trainer: https://github.com/clovaai/voxceleb_trainer/blob/master/loss/aamsoftmax.py
+'''
+
 import torch, math
 import torch.nn as nn
 import torch.nn.functional as F

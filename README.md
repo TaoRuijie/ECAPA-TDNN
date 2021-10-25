@@ -1,6 +1,6 @@
-## ECAPA_TDNN_Trainer
+## Introduction
 
-This repository contains unofficial code to train the speaker recognition model (Standard ECAPA-TDNN) in VoxCeleb2 dataset.
+This repository contains unofficial code to train the [standard ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf) for speaker recognition in VoxCeleb2 dataset.
 
 This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer)
 
@@ -8,13 +8,11 @@ Advantages of this repository:
 
 1) Simple: 6 python files with 600 lines.
 
-2) Fast:  36 hours to train in one 3090 GPU 
+2) Fast:  36 hours to train by one 3090 GPU 
 
 3) Robust: EER = 0.86 in VoxCeleb1
 
-## Best Performance in this project
-
-With AS-norm
+## Best Performance in this project (with AS-norm)
 
 | Dataset |  Vox1_O  |  Vox1_E  |  Vox1_H  |
 | ------- |  ------  |  ------  |  ------  |
@@ -23,10 +21,9 @@ With AS-norm
 
 ***
 
-### System Description
+## System Description
 
 I will write a technique report about this system and all the details later. Please wait.
-
 
 ### Dependencies
 
@@ -42,17 +39,13 @@ Start from the existing environment
 pip install -r requirements.txt
 ```
 
-***
-
 ### Data preparation
 
 Please follow the official coda to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part. Please read that part carefully and make sure you do it correctly.
 
-Dataset you need to perpare for training: VoxCeleb2 training set, MUSAN dataset, RIR dataset.
+Dataset you need to perpare for training: 1) VoxCeleb2 training set, 2) MUSAN dataset, 3) RIR dataset.
 
-Dataset you need to perpare for evaluation: VoxCeleb1 test set (Vox1_O, Compulsory), VoxCeleb1 train set (Vox1_E and Vox1_H, Optional).
-
-***
+Dataset you need to perpare for evaluation: 1) VoxCeleb1 test set (Vox1_O, Compulsory), 2) VoxCeleb1 train set (Vox1_E and Vox1_H, Optional).
 
 ### Training
 
@@ -63,8 +56,6 @@ python trainSpeakerNet.py --save_path exps/exp1
 ```
 
 In every `test_step` epoches, system will be evaluated in Vox1_O set and print the EER. The result will be saved in `exps/exp1/score.txt`, the model will saved in `exps/exp1/model`
-
-***
 
 ### Pretrained model
 
@@ -94,8 +85,6 @@ With AS-norm, this system performs `EER: 0.86`, we will release the code of AS-n
   year={2020}
 }
 ```
-
-***
 
 ### Acknowledge
 

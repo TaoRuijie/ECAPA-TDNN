@@ -1,8 +1,11 @@
-import os, numpy
+'''
+Some utilized functions
+These functions are all copied from voxceleb_trainer: https://github.com/clovaai/voxceleb_trainer/blob/master/tuneThreshold.py
+'''
+
+import os, numpy, torch
 from sklearn import metrics
 from operator import itemgetter
-
-import torch
 import torch.nn.functional as F
 
 def init_args(args):
@@ -10,9 +13,6 @@ def init_args(args):
 	args.model_save_path    = os.path.join(args.save_path, 'model')
 	os.makedirs(args.model_save_path, exist_ok = True)
 	return args
-
-
-## The rest functions are all copied from voxceleb_trainer: https://github.com/clovaai/voxceleb_trainer/blob/master/tuneThreshold.py
 
 def tuneThresholdfromScore(scores, labels, target_fa, target_fr = None):
 	
