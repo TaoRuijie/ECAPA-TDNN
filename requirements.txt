@@ -1,5 +1,4 @@
-torch>=1.6.0
-torchaudio>=0.6.0
+torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 numpy
 scipy
 scikit-learn

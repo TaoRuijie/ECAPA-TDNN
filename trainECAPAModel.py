@@ -55,7 +55,7 @@ if args.eval == True:
 	s = ECAPAModel(**vars(args))
 	print("Model %s loaded from previous state!"%args.initial_model)
 	s.load_parameters(args.initial_model)
-	EER, minDCF = s.eval_network(eval_list = args.eval_list, eval_path = args.eval_path, loader = evalLoader)
+	EER, minDCF = s.eval_network(eval_list = args.eval_list, eval_path = args.eval_path)
 	print("EER %2.2f%%, minDCF %.4f%%"%(EER, minDCF))
 	quit()
 
@@ -87,7 +87,7 @@ while(1):
 	## Evaluation every [test_step] epochs
 	if epoch % args.test_step == 0:
 		s.save_parameters(args.model_save_path + "/model_%04d.model"%epoch)
-		EERs.append(s.eval_network(eval_list = args.eval_list, eval_path = args.eval_path, loader = evalLoader, score_norm = False)[0])
+		EERs.append(s.eval_network(eval_list = args.eval_list, eval_path = args.eval_path)[0])
 		print(time.strftime("%Y-%m-%d %H:%M:%S"), "%d epoch, ACC %2.2f%%, EER %2.2f%%, bestEER %2.2f%%"%(epoch, acc, EERs[-1], min(EERs)))
 		score_file.write("%d epoch, LR %f, LOSS %f, ACC %2.2f%%, EER %2.2f%%, bestEER %2.2f%%\n"%(epoch, lr, loss, acc, EERs[-1], min(EERs)))
 		score_file.flush()

@@ -31,6 +31,8 @@ Start from the existing environment
 pip install -r requirements.txt
 ```
 
+Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
+
 ### Data preparation
 
 Please follow the official code to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part.
@@ -51,22 +53,26 @@ Dataset you need to perpare for evaluation:
 
 ### Training
 
-Change the data path in the `trainSpeakerNet.py`, then you can train ECAPA-TDNN model for speaker recognition end-to-end by using:
+Change the data path in the `trainECAPAModel.py`, then you can train ECAPA-TDNN model for speaker recognition end-to-end by using:
 
 ```
-python trainSpeakerNet.py --save_path exps/exp1 
+python trainECAPAModel.py --save_path exps/exp1 
 ```
 
-In every `test_step` epoches, system will be evaluated in Vox1_O set and print the EER. The result will be saved in `exps/exp1/score.txt`, the model will saved in `exps/exp1/model`
+Every `test_step` epoches, system will be evaluated in Vox1_O set and print the EER. 
+
+The result will be saved in `exps/exp1/score.txt`. The model will saved in `exps/exp1/model`
 
 ### Pretrained model
 
 Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can check it by using: 
 ```
-python trainSpeakerNet.py --eval --initial_model exps/pretrain.model
+python trainECAPAModel.py --eval --initial_model exps/pretrain.model
 ```
 
 With AS-norm, this system performs `EER: 0.86`, we will release the code of AS-norm later.
+
+We also update the score.txt file in `exps/pretrain_score.txt`, it contains the training loss, training acc and EER in Vox1_O in each epoch for your reference.
 
 ***
 
