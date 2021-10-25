@@ -1,8 +1,8 @@
 ## Introduction
 
-This repository contains unofficial code to train the standard [ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf) for speaker recognition in VoxCeleb2 dataset.
+This repository contains my unofficial reimplementation of the standard [ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf), which is the speaker recognition in VoxCeleb2 dataset.
 
-This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer)
+This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer).
 
 ## Best Performance in this project (with AS-norm)
 
@@ -19,6 +19,8 @@ I will write a technique report about this system and all the details later. Ple
 
 ### Dependencies
 
+Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
+
 Start from building the environment
 ```
 conda create -n ECAPA python=3.7.9 anaconda
@@ -31,21 +33,19 @@ Start from the existing environment
 pip install -r requirements.txt
 ```
 
-Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
-
 ### Data preparation
 
-Please follow the official code to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part.
+Please follow the official code to perpare your VoxCeleb2 dataset from the 'Data preparation' part in [this repository](https://github.com/clovaai/voxceleb_trainer).
 
-Dataset you need to perpare for training: 
+Dataset for training usage: 
 
-1) VoxCeleb2 training set, 
+1) VoxCeleb2 training set;
 
-2) MUSAN dataset, 
+2) MUSAN dataset;
 
 3) RIR dataset.
 
-Dataset you need to perpare for evaluation: 
+Dataset for evaluation: 
 
 1) VoxCeleb1 test set for [Vox1_O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt) 
 
@@ -53,7 +53,7 @@ Dataset you need to perpare for evaluation:
 
 ### Training
 
-Change the data path in the `trainECAPAModel.py`, then you can train ECAPA-TDNN model for speaker recognition end-to-end by using:
+Then you can change the data path in the `trainECAPAModel.py`. Train ECAPA-TDNN model end-to-end by using:
 
 ```
 python trainECAPAModel.py --save_path exps/exp1 
@@ -63,9 +63,12 @@ Every `test_step` epoches, system will be evaluated in Vox1_O set and print the 
 
 The result will be saved in `exps/exp1/score.txt`. The model will saved in `exps/exp1/model`
 
+In my case, I trained 80 epoches in one 3090 GPU. Each epoch takes 37 mins, the total training time is about 48 hours.
+
 ### Pretrained model
 
 Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can check it by using: 
+
 ```
 python trainECAPAModel.py --eval --initial_model exps/pretrain.model
 ```
@@ -109,6 +112,8 @@ We study many useful projects in our codeing process, which includes:
 
 Thanks for these authors to open source their code!
 
-If you have any questions about this project, please ask me from the 'issue' part (Please do not ask me though any social media, thanks!)
+### Notes
 
-If you improve this project by some methods, please let me know, I will update it. Thanks!
+**If you meet the problems about this repository, Please ask me from the 'issue' part using English, so others can also benifit from it. I suggest you NOT to ask me though the social media (such as bilibili). Thanks for your understanding!**
+
+**If you improve the result based on this repository by some methods, please let me know. Thanks!**
