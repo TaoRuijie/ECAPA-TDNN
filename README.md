@@ -15,6 +15,11 @@ With AS-norm
 
 ***
 
+### System Description
+
+I will write a technique report about this system and all the details later. Please wait.
+
+
 ### Dependencies
 
 Start from building the environment
@@ -31,13 +36,7 @@ pip install -r requirements.txt
 
 ***
 
-## System Description
-
-I will write a technique report about this system and all the details later. Please wait.
-
-***
-
-#### Data preparation
+### Data preparation
 
 Please follow the official coda to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part. Please read that part carefully and make sure you do it correctly.
 
@@ -46,7 +45,7 @@ Dataset you need to perpare for evaluation: VoxCeleb1 test set (Vox1_O, Compulso
 
 ***
 
-#### Training
+### Training
 
 Change the data path in the `trainSpeakerNet.py`, then you can train ECAPA-TDNN model for speaker recognition end-to-end by using:
 
@@ -58,7 +57,7 @@ In every `test_step` epoches, system will be evaluated in Vox1_O set and print t
 
 ***
 
-#### Pretrained model
+### Pretrained model
 
 Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can download our pretrain model you can check it by using: 
 ```
