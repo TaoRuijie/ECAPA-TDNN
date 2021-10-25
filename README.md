@@ -4,6 +4,14 @@ This repository contains unofficial code to train the speaker recognition model 
 
 This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer)
 
+Advantages of this repository: 
+
+1) Simple: 6 python files with 600 lines.
+
+2) Fast:  36 hours to train in one 3090 GPU 
+
+3) Robust: EER = 0.86 in VoxCeleb1
+
 ## Best Performance in this project
 
 With AS-norm
@@ -41,6 +49,7 @@ pip install -r requirements.txt
 Please follow the official coda to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part. Please read that part carefully and make sure you do it correctly.
 
 Dataset you need to perpare for training: VoxCeleb2 training set, MUSAN dataset, RIR dataset.
+
 Dataset you need to perpare for evaluation: VoxCeleb1 test set (Vox1_O, Compulsory), VoxCeleb1 train set (Vox1_E and Vox1_H, Optional).
 
 ***
