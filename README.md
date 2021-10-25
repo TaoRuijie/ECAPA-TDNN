@@ -4,6 +4,15 @@ This repository contains unofficial code to train the speaker recognition model 
 
 This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer)
 
+## Best Performance in this project
+
+With AS-norm
+
+| Dataset |  Vox1_O  |  Vox1_E  |  Vox1_H  |
+| ------- |  ------  |  ------  |  ------  |
+|  EER    |   0.86   |  1.18    |  2.17    |
+|  minDCF |  0.0686  | 0.0765   |  0.1295  |
+
 ***
 
 ### Dependencies
@@ -22,18 +31,11 @@ pip install -r requirements.txt
 
 ***
 
-## Best Performance in this project
-
-With AS-norm
-
-| Dataset |  Vox1_O  |  Vox1_E  |  Vox1_H  |
-| ------- |  ------  |  ------  |  ------  |
-|  EER    |   0.86   |  1.18    |  2.17    |
-|  minDCF |  0.0686  | 0.0765   |  0.1295  |
-
 ## System Description
 
 I will write a technique report about this system and all the details later. Please wait.
+
+***
 
 #### Data preparation
 
@@ -41,6 +43,8 @@ Please follow the official coda to perpare your VoxCeleb2 dataset from [here](ht
 
 Dataset you need to perpare for training: VoxCeleb2 training set, MUSAN dataset, RIR dataset.
 Dataset you need to perpare for evaluation: VoxCeleb1 test set (Vox1_O, Compulsory), VoxCeleb1 train set (Vox1_E and Vox1_H, Optional).
+
+***
 
 #### Training
 
@@ -52,6 +56,8 @@ python trainSpeakerNet.py --save_path exps/exp1
 
 In every `test_step` epoches, system will be evaluated in Vox1_O set and print the EER. The result will be saved in `exps/exp1/score.txt`, the model will saved in `exps/exp1/model`
 
+***
+
 #### Pretrained model
 
 Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can download our pretrain model you can check it by using: 
@@ -59,7 +65,9 @@ Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can
 python trainSpeakerNet.py --eval --initial_model pretrain.model
 ```
 
-We will release the code of AS-norm later.
+With AS-norm, this system performs `EER: 0.86`, we will release the code of AS-norm later.
+
+***
 
 
 ### Reference
@@ -78,6 +86,8 @@ We will release the code of AS-norm later.
   year={2020}
 }
 ```
+
+***
 
 ### Acknowledge
 
