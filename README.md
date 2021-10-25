@@ -1,16 +1,8 @@
 ## Introduction
 
-This repository contains unofficial code to train the [standard ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf) for speaker recognition in VoxCeleb2 dataset.
+This repository contains unofficial code to train the standard [ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf) for speaker recognition in VoxCeleb2 dataset.
 
 This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer)
-
-Advantages of this repository: 
-
-1) Simple: 6 python files with 600 lines.
-
-2) Fast:  36 hours to train by one 3090 GPU 
-
-3) Robust: EER = 0.86 in VoxCeleb1
 
 ## Best Performance in this project (with AS-norm)
 
@@ -41,11 +33,11 @@ pip install -r requirements.txt
 
 ### Data preparation
 
-Please follow the official coda to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part. Please read that part carefully and make sure you do it correctly.
+Please follow the official code to perpare your VoxCeleb2 dataset from [here](https://github.com/clovaai/voxceleb_trainer), the 'Data preparation' part.
 
 Dataset you need to perpare for training: 1) VoxCeleb2 training set, 2) MUSAN dataset, 3) RIR dataset.
 
-Dataset you need to perpare for evaluation: 1) VoxCeleb1 test set (Vox1_O, Compulsory), 2) VoxCeleb1 train set (Vox1_E and Vox1_H, Optional).
+Dataset you need to perpare for evaluation: 1) VoxCeleb1 test set for [Vox1_O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt) 2) VoxCeleb1 train set for [Vox1_E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt) and [Vox1_H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt) (Optional).
 
 ### Training
 
@@ -59,9 +51,9 @@ In every `test_step` epoches, system will be evaluated in Vox1_O set and print t
 
 ### Pretrained model
 
-Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can download our pretrain model you can check it by using: 
+Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can check it by using: 
 ```
-python trainSpeakerNet.py --eval --initial_model pretrain.model
+python trainSpeakerNet.py --eval --initial_model exps/pretrain.model
 ```
 
 With AS-norm, this system performs `EER: 0.86`, we will release the code of AS-norm later.
@@ -72,10 +64,11 @@ With AS-norm, this system performs `EER: 0.86`, we will release the code of AS-n
 ### Reference
 
 ```
-@article{desplanques2020ecapa,
-  title={Ecapa-tdnn: Emphasized channel attention, propagation and aggregation in tdnn based speaker verification},
+@inproceedings{desplanques2020ecapa,
+  title={{ECAPA-TDNN: Emphasized Channel Attention, propagation and aggregation in TDNN based speaker verification}},
   author={Desplanques, Brecht and Thienpondt, Jenthe and Demuynck, Kris},
-  journal={arXiv preprint arXiv:2005.07143},
+  booktitle={Interspeech 2020},
+  pages={3830--3834},
   year={2020}
 }
 @inproceedings{chung2020in,
@@ -101,3 +94,5 @@ We study many useful projects in our codeing process, which includes:
 Thanks for these authors to open source their code!
 
 If you have any questions about this project, please ask me from the 'issue' part (Please do not ask me though any social media, thanks!)
+
+If you improve this project by some methods, please let me know, I will update it. Thanks!
