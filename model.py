@@ -95,20 +95,20 @@ class PreEmphasis(torch.nn.Module):
 
 class FbankAug(nn.Module):
 
-    def __init__(self, time_mask_width = (0, 8), freq_mask_width = (0, 10)):
+    def __init__(self, freq_mask_width = (0, 8), time_mask_width = (0, 10)):
         self.time_mask_width = time_mask_width
         self.freq_mask_width = freq_mask_width
         super().__init__()
 
     def mask_along_axis(self, x, dim):
         original_size = x.shape
-        batch, time, fea = x.shape
+        batch, fea, time = x.shape
         if dim == 1:
-            D = time
-            width_range = self.time_mask_width
-        else:
             D = fea
             width_range = self.freq_mask_width
+        else:
+            D = time
+            width_range = self.time_mask_width
 
         mask_len = torch.randint(width_range[0], width_range[1], (batch, 1), device=x.device).unsqueeze(2)
         mask_pos = torch.randint(0, max(1, D - mask_len.max()), (batch, 1), device=x.device).unsqueeze(2)
