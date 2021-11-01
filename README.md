@@ -11,6 +11,7 @@ This repository is modified based on [voxceleb_trainer](https://github.com/clova
 |  EER    |   0.86   |  1.18    |  2.17    |
 |  minDCF |  0.0686  | 0.0765   |  0.1295  |
 
+Notice, this result is in the Vox1_O clean list, for Vox1_O Noise list: EER is 1.00 and minDCF is 0.0713.
 ***
 
 ## System Description
