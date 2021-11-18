@@ -16,7 +16,7 @@ Notice, this result is in the Vox1_O clean list, for Vox1_O Noise list: EER is 1
 
 ## System Description
 
-The technique report about this system and all the details can be found [here](https://arxiv.org/pdf/2111.06671.pdf), Session 3, `ECAPA-TDNN SYSTEM`.
+I have uploaded the [system description](https://arxiv.org/pdf/2111.06671.pdf), please check the Session 3, `ECAPA-TDNN SYSTEM`.
 
 ### Dependencies
 
