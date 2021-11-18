@@ -16,7 +16,7 @@ Notice, this result is in the Vox1_O clean list, for Vox1_O Noise list: EER is 1
 
 ## System Description
 
-I will write a technique report about this system and all the details later. Please wait.
+The technique report about this system and all the details can be found [here](https://arxiv.org/pdf/2111.06671.pdf), Session 3, `ECAPA-TDNN SYSTEM`.
 
 ### Dependencies
 
@@ -81,8 +81,9 @@ We also update the score.txt file in `exps/pretrain_score.txt`, it contains the 
 ***
 
 
-### Reference
+### Reference & Citation
 
+Original ECAPA-TDNN paper
 ```
 @inproceedings{desplanques2020ecapa,
   title={{ECAPA-TDNN: Emphasized Channel Attention, propagation and aggregation in TDNN based speaker verification}},
@@ -91,6 +92,16 @@ We also update the score.txt file in `exps/pretrain_score.txt`, it contains the 
   pages={3830--3834},
   year={2020}
 }
+
+Our reimplement report
+@inproceedings{rohan2021cts,
+  title={{HLT-NUS SUBMISSION FOR 2020 NIST Conversational Telephone Speech SRE}},
+  author={Rohan Kumar Das, Ruijie Tao, Haizhou Li},
+  booktitle={arXiv:2111.06671},
+  year={2021}
+}
+
+VoxCeleb_trainer paper
 @inproceedings{chung2020in,
   title={In defence of metric learning for speaker recognition},
   author={Chung, Joon Son and Huh, Jaesung and Mun, Seongkyu and Lee, Minjae and Heo, Hee Soo and Choe, Soyeon and Ham, Chiheon and Jung, Sunghwan and Lee, Bong-Jin and Han, Icksang},
