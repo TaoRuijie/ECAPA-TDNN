@@ -92,8 +92,10 @@ Original ECAPA-TDNN paper
   pages={3830--3834},
   year={2020}
 }
+```
 
 Our reimplement report
+```
 @inproceedings{rohan2021cts,
   title={{HLT-NUS SUBMISSION FOR 2020 NIST Conversational Telephone Speech SRE}},
   author={Rohan Kumar Das, Ruijie Tao, Haizhou Li},
@@ -102,6 +104,7 @@ Our reimplement report
 }
 
 VoxCeleb_trainer paper
+```
 @inproceedings{chung2020in,
   title={In defence of metric learning for speaker recognition},
   author={Chung, Joon Son and Huh, Jaesung and Mun, Seongkyu and Lee, Minjae and Heo, Hee Soo and Choe, Soyeon and Ham, Chiheon and Jung, Sunghwan and Lee, Bong-Jin and Han, Icksang},
