@@ -81,7 +81,7 @@ We also update the score.txt file in `exps/pretrain_score.txt`, it contains the 
 ***
 
 
-### Reference & Citation
+### Reference
 
 Original ECAPA-TDNN paper
 ```
@@ -102,6 +102,7 @@ Our reimplement report
   booktitle={arXiv:2111.06671},
   year={2021}
 }
+```
 
 VoxCeleb_trainer paper
 ```
