@@ -96,10 +96,10 @@ Original ECAPA-TDNN paper
 
 Our reimplement report
 ```
-@inproceedings{rohan2021cts,
-  title={{HLT-NUS SUBMISSION FOR 2020 NIST Conversational Telephone Speech SRE}},
-  author={Rohan Kumar Das, Ruijie Tao, Haizhou Li},
-  booktitle={arXiv:2111.06671},
+@article{das2021hlt,
+  title={HLT-NUS SUBMISSION FOR 2020 NIST Conversational Telephone Speech SRE},
+  author={Das, Rohan Kumar and Tao, Ruijie and Li, Haizhou},
+  journal={arXiv preprint arXiv:2111.06671},
   year={2021}
 }
 ```
