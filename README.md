@@ -137,3 +137,7 @@ Thanks for these authors to open source their code!
 If you meet the problems about this repository, **Please ask me from the 'issue' part in Github (using English) instead of sending the messages to me from bilibili, so others can also benifit from it.** Thanks for your understanding!
 
 If you improve the result based on this repository by some methods, please let me know. Thanks!
+
+### Cooperation
+
+If you are interested to work on this topic and have some ideas to implement, I am glad to collaborate and contribute with my experiences & knowlegde in this topic. Please contact me with ruijie.tao@u.nus.edu.
